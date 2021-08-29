@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-
-import { Container, Row, Col, Nav } from 'react-bootstrap'
+import { Container, Row, Col, Nav } from 'react-bootstrap';
+import { Profile, LoginButton, LogoutButton } from './components/Users';
+import WeatherForecast from './components/WeatherForecast';
 
 function App() {
     return (
@@ -12,18 +12,19 @@ function App() {
                 </Container>
             </Nav>
             <Row>
-                <Col md className="App">
-                    <p>
-                        Edit <code>src/App.tsx</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
+                <Col md data-testid="welcome-container">
+                    <p>Welcome</p>
+                    <WeatherForecast />
+                </Col>
+                <Col md>
+                    <LoginButton />
+                    <LogoutButton />
+                    <Profile />
+                </Col>
+            </Row>
+            <Row>
+                <Col md>
+                    <p>paragraph</p>
                 </Col>
                 <Col md>
                     <p>Some text</p>
